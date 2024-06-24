@@ -1,8 +1,9 @@
+// card
 import React from "react";
 
 export const Card =({id,title,author,bid,image}) => {
     return(
-       <div className="bg-white rounded-xl w-64 m-auto shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+       <div className=" rounded-xl w-[240px] m-auto shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
   <div className="relative">
     <img src={image} alt={title} className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"/>
     <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full shadow-md">

@@ -1,3 +1,4 @@
+// topcollection
 import React, { useState } from 'react';
 import { FaUser } from 'react-icons/fa';
 
@@ -31,7 +32,7 @@ const TopCollection = () => {
   const displayedCollections = showAll ? topCollections : topCollections.slice(0, 2);
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow">
+    <div className="bg-white p-4 w-3/4 mx-auto rounded-lg mt-16 shadow">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Top Collection</h2>
         <button 

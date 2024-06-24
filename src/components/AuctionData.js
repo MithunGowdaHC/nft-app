@@ -1,4 +1,3 @@
-
 export const AuctionData = [
     { id: 1, title: 'The Unfortable Facer', author: 'Dane Riccardo', bid: '18.99 ETH', image: 'https://images.unsplash.com/photo-1621932953986-15fcf084da0f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8' },
     { id: 2, title: 'Mad Ballot Holder', author: 'Angelina Cruzz', bid: '4.32 ETH', image: 'https://plus.unsplash.com/premium_photo-1672912348671-9a9ec5541b7f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmZ0fGVufDB8fDB8fHww' },

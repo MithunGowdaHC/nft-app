@@ -3,7 +3,7 @@ import { FaSearch, FaEthereum, FaBell, FaUserCircle } from 'react-icons/fa'; // 
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center  bg-white shadow p-4">
+    <div className="flex justify-between items-center  bg-white shadow m-3 p-4">
       <div className="flex items-center">
         <input
           type="text"

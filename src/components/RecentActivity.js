@@ -1,3 +1,4 @@
+// recent activity
 import React from 'react'
 
 const RecentActivity = () => {
