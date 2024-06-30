@@ -12,14 +12,17 @@ import {
   FaHistory,
   FaQuestionCircle,
 } from "react-icons/fa"; // Import icons
-import { userlogo } from "../utils/Constants";
+// import { userlogo } from "../utils/Constants";
+
+import myLogo from "../utils/my-logo.jpg";
 import { Link } from "react-router-dom";
+
 
 const Sidebar = () => {
   return (
     <div className=" fixed left-0 top-0 bottom-0 w-[270px] overflow-y-auto bg-white shadow-lg h-screen scroll-m-0  bg-gray-100 p-8">
       <div className="flex items-center space-x-1 mb-14">
-        <img src={userlogo} className="w-12 h-12 rounded-full" alt="avatar" />
+        <img src={myLogo} className="w-14 h-14 rounded-full" alt="avatar" />
         <div>
           <h2 className="text-lg font-medium">Mithun Gowda</h2>
           <p className="text-gray-500">@mithun</p>
@@ -42,7 +45,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
-            <Link className=" flex items-center">
+            <Link to={"./settings"} className=" flex items-center">
               <FaCog className="mr-2" /> Settings
             </Link>
           </li>
@@ -55,8 +58,8 @@ const Sidebar = () => {
         <nav>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
             <Link className=" flex items-center">
-              {" "}
-              <FaStore className="mr-2" /> Market
+            
+              <FaStore className="mr-2" to={"./market"} /> Market
             </Link>
           </li>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
@@ -65,7 +68,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
-            <Link className=" flex items-center">
+            <Link to={"./saved"} className=" flex items-center">
               <FaHeart className="mr-2" /> Saved
             </Link>
           </li>

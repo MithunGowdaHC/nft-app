@@ -7,7 +7,7 @@ export const Card =({id,title,author,bid,image}) => {
   <div className="relative">
     <img src={image} alt={title} className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"/>
     <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full shadow-md">
-      <span className="font-semibold text-gray-800">{bid} ETH</span>
+      <span className="font-semibold text-gray-800">{bid}</span>
     </div>
   </div>
   <div className="p-5">

@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from "react";
+import Sidebar from "./Sidebar";
+
+import Chats from "./Chats";
+import ChatWindow from "./ChatWindow";
+import EmptyChat from "./EmptyChat";
 
 const MessageContainer = () => {
-  return (
-    <div>MessageContainer</div>
-  )
-}
+   
+  const [selectContact, setselectContact] = useState(null);
 
-export default MessageContainer
+  return (
+    <>
+      <div className=" flex">
+        <Sidebar />
+        <Chats onselectContact={setselectContact} />
+        {selectContact?<ChatWindow  /> : <EmptyChat/>}
+        
+      </div>
+    </>
+  );
+};
+
+export default MessageContainer;
