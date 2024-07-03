@@ -22,7 +22,7 @@ const Sidebar = () => {
   return (
     <div className=" fixed left-0 top-0 bottom-0 w-[270px] overflow-y-auto bg-white shadow-lg h-screen scroll-m-0  bg-gray-100 p-8">
       <div className="flex items-center space-x-1 mb-14">
-        <img src={myLogo} className="w-14 h-14 rounded-full" alt="avatar" />
+        <img src={myLogo} className="w-14 h-14 p-1 rounded-full" alt="avatar" />
         <div>
           <h2 className="text-lg font-medium">Mithun Gowda</h2>
           <p className="text-gray-500">@mithun</p>
@@ -57,13 +57,13 @@ const Sidebar = () => {
 
         <nav>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
-            <Link className=" flex items-center">
+            <Link to={"./market"} className=" flex items-center">
             
               <FaStore className="mr-2" to={"./market"} /> Market
             </Link>
           </li>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
-            <Link className=" flex items-center">
+            <Link to={"./active-bid"} className=" flex items-center">
               <FaGavel className="mr-2" /> Active Bid
             </Link>
           </li>

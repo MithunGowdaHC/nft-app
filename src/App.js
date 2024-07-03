@@ -11,6 +11,7 @@ import Saved from "./components/Saved";
 import Collection from "./components/Collection";
 import Wallet from "./components/Wallet";
 import AllCreators from "./components/AllCreators";
+import LoginPage from "./components/Login";
 
 
 
@@ -61,6 +62,11 @@ const appRouter = createBrowserRouter([
   {
     path:"/all-creators",
     element:<AllCreators/>
+
+  },
+  {
+    path:"/login",
+    element:<LoginPage/>
 
   },
 ])

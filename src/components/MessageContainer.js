@@ -4,7 +4,6 @@ import Sidebar from "./Sidebar";
 import Chats from "./Chats";
 import ChatWindow from "./ChatWindow";
 import EmptyChat from "./EmptyChat";
-
 const MessageContainer = () => {
    
   const [selectContact, setselectContact] = useState(null);
