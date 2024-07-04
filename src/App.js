@@ -1,101 +1,75 @@
 import React from "react";
-import MessageContainer from "./components/MessageContainer";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
+import { RouterProvider, createBrowserRouter, Navigate } from "react-router-dom";
+import { auth } from "./utils/firebase";
+import LoginPage from "./components/Login";
 import Dashboard from "./components/Dashboard";
-import Settings from "./components/Settings";
-
+import MessageContainer from "./components/MessageContainer";
 import Market from "./components/Market";
+import Settings from "./components/Settings";
 import Bid from "./components/Bid";
 import Saved from "./components/Saved";
 import Collection from "./components/Collection";
 import Wallet from "./components/Wallet";
 import AllCreators from "./components/AllCreators";
-import LoginPage from "./components/Login";
 
-
-
-
+// ProtectedRoute component
+const ProtectedRoute = ({ children }) => {
+  const user = auth.currentUser;
+  if (!user) {
+    return <Navigate to="/" replace />;
+  }
+  return children;
+};
 
 function App() {
-const appRouter = createBrowserRouter([
-  {
-    path:"/",
-    element:<Dashboard/>
-
-  },
-  {
-    path:"/message",
-    element:<MessageContainer/>
-
-  },
-  {
-    path:"/settings",
-    element:<Settings/>
-
-  },
-  {
-    path:"/market",
-    element:<Market/>
-
-  },
-  {
-    path:"/bid",
-    element:<Bid/>
-
-  },
-  {
-    path:"/saved",
-    element:<Saved/>
-
-  },
-  {
-    path:"/collection",
-    element:<Collection/>
-
-  },
-  {
-    path:"/wallet",
-    element:<Wallet/>
-
-  },
-  {
-    path:"/all-creators",
-    element:<AllCreators/>
-
-  },
-  {
-    path:"/login",
-    element:<LoginPage/>
-
-  },
-])
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <LoginPage />
+    },
+    {
+      path: "/dashboard",
+      element: <ProtectedRoute><Dashboard /></ProtectedRoute>
+    },
+    {
+      path: "/message",
+      element: <ProtectedRoute><MessageContainer /></ProtectedRoute>
+    },
+    {
+      path: "/market",
+      element: <ProtectedRoute><Market /></ProtectedRoute>
+    },
+    {
+      path: "/settings",
+      element: <ProtectedRoute><Settings /></ProtectedRoute>
+    },
+    {
+      path: "/bid",
+      element: <ProtectedRoute><Bid /></ProtectedRoute>
+    },
+    {
+      path: "/saved",
+      element: <ProtectedRoute><Saved /></ProtectedRoute>
+    },
+    {
+      path: "/collection",
+      element: <ProtectedRoute><Collection /></ProtectedRoute>
+    },
+    {
+      path: "/wallet",
+      element: <ProtectedRoute><Wallet /></ProtectedRoute>
+    },
+    {
+      path: "/all-creators",
+      element: <ProtectedRoute><AllCreators /></ProtectedRoute>
+    },
+  ]);
 
   return (
-    
-   
     <div className="App">
-      <>
       <RouterProvider router={appRouter} />
-      </>
     </div>
-   
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

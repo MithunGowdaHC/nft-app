@@ -22,6 +22,7 @@ const MainComponent = () => {
     <div>
       <FeaturedCreators/>
       <RecentActivity/>
+      
     </div>
     </div>
     

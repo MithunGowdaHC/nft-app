@@ -4,6 +4,7 @@ import { checkValidData } from "../utils/validate";
 import { auth } from "../utils/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router";
 
 
 const LoginPage = () => {
@@ -11,6 +12,7 @@ const LoginPage = () => {
   const [errormessage, seterrormessage] = useState(null);
   const password = useRef(null);
   const email = useRef(null);
+  const navigate = useNavigate()
 
   const toggleSignIn = () => {
     setsignIn(!signIn);
@@ -38,6 +40,7 @@ const LoginPage = () => {
     // Signed in 
     const user = userCredential.user;
     console.log(user)
+    navigate("/dashboard")
    
   })
   .catch((error) => {

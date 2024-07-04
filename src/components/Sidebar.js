@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className=" fixed left-0 top-0 bottom-0 w-[270px] overflow-y-auto bg-white shadow-lg h-screen scroll-m-0  bg-gray-100 p-8">
+    <div className=" fixed left-0 top-0  bottom-0 w-[270px] overflow-y-auto bg-white shadow-lg h-screen scroll-m-0  bg-gray-100 p-8">
       <div className="flex items-center space-x-1 mb-14">
         <img src={myLogo} className="w-14 h-14 p-1 rounded-full" alt="avatar" />
         <div>
@@ -34,7 +34,7 @@ const Sidebar = () => {
 
         <nav>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
-            <Link className=" flex items-center" to={"/"}>
+            <Link className=" flex items-center" to={"/dashboard"}>
               
               <FaHome className="mr-2" /> Dashboard
             </Link>
@@ -45,10 +45,12 @@ const Sidebar = () => {
             </Link>
           </li>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
-            <Link to={"./settings"} className=" flex items-center">
-              <FaCog className="mr-2" /> Settings
+            <Link to={"./market"} className=" flex items-center">
+            
+              <FaStore className="mr-2" to={"./market"} /> Market
             </Link>
           </li>
+         
         </nav>
       </div>
 
@@ -56,10 +58,9 @@ const Sidebar = () => {
         <h2 className="text-sm">MARKETPLACE</h2>
 
         <nav>
-          <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
-            <Link to={"./market"} className=" flex items-center">
-            
-              <FaStore className="mr-2" to={"./market"} /> Market
+           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
+            <Link to={"./settings"} className=" flex items-center">
+              <FaCog className="mr-2" /> Settings
             </Link>
           </li>
           <li className="flex  pointer   items-center py-2.5 text-lg px-4 rounded transition duration-200 hover:bg-gray-200">
